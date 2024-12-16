@@ -119,6 +119,169 @@ public class listsLevel1 {
 		
 	}
 
+	public static Node<Integer> exe6(Node<Integer> a1, int x)
+	{
+		Node<Integer> a2 = a1;
+		Node<Integer> a3 = a2.getNext();
+		        	 
+		while (a3.getValue() != null)
+			{
+				if(a3.getValue().equals(x))
+				{
+		        		a2.setNext(a3.getNext());
+		        		return a1;
+		        	}
+		        	else
+				{
+		        		a2.setNext(a3); 
+		     	              	a2=a3;
+		        	        a3=a3.getNext();
+		        	}
+		        }
+		        	   
+		return a1;
+	} 
+		        
+		        
+		        
+	public static Node<Integer> exe7(Node<Integer> a1, int x)
+	{
+		Node<Integer> a2 = a1;
+		Node<Integer> a3=a2.getNext();
+		int i=1;
+		if(x==1)
+		{
+		     return a3;
+		}
+		while (a3.getValue() != null)
+			{
+		     	      if(i==x-1)
+			      {
+				      a2.setNext(a3.getNext());
+				      return a1;
+			      }
+		     	      else
+			      {
+				      a2.setNext(a3); 
+			              a2=a3;
+		   	              a3=a3.getNext();
+		     	      }
+		     	      i++;
+		     	}
+		     	return a1;
+	}
+		        	
+
+	public static boolean exe8(Node<Integer> a1, Node<Integer> b1,Node<Integer> c1)
+	{
+		if(a1==null)
+		{
+			return true;
+		}
+		
+		if(b1==null) 
+		{
+		        return false;
+		}
+		          
+		if(!b1.getValue().equals(a1.getValue())) 
+		{
+		      	return q8(a1,b1.getNext(),c1);
+		}
+		      	
+		return q8(a1.getNext(),c1,c1);
+		    	   
+	}
+		        
+		        
+		        
+	public static void exe9(Node<Integer> a1, Node<Integer> b1)
+	{
+		Node<Integer> b2 = b1;
+		while(a1 != null) 
+		{
+		        if(b2.getValue().equals(a1.getValue())) 
+			{
+		        	System.out.println(a1.getValue());
+		        	b2=b2.getNext();
+		        }
+		        else 
+			{
+		        	b2=b2.getNext();
+		        }
+		        		
+			if(b2==null) 
+			{
+		              	b2=b1;
+		              	a1=a1.getNext();
+		        }
+		}
+		        	
+	}
+		        
+	public static Node<Integer> exe10(Node<Integer> a1, Node<Integer> b1)
+	{
+		Node<Integer> b2 = b1;
+		        	
+		while(a1 != null) 
+		{
+		        if(b2.getValue().equals(a1.getValue())) 
+			{
+		        	b2=b2.getNext();
+		        }
+				
+		        else 
+			{
+		        	b2=b2.getNext();
+		        }
+			
+		        if(b2==null) 
+			{
+		              	b2=b1;
+		              	a1=a1.getNext();
+		        }
+		}
+		        	return c1;
+		        	
+	}
+		         	
+		        
+		        
+	public static Node<Integer> exe11(Node<Integer> a1, Node<Integer> b1)
+	{
+		Node<Integer> b2 = b1;
+		Node<Integer> a2 = a1;
+		Node<Integer> a3=a2.getNext();
+		while(a3 != null) 
+		{
+		        if(b2.getValue().equals(a3.getValue())) 
+			{
+		        	a2.setNext(a3.getNext());
+		        	a2=a3.getNext();
+		        	a3=a3.getNext().getNext();
+		        	b2=b2.getNext();
+		        }
+		        
+			else 
+			{
+		        	a2=a3;
+		        	a3=a3.getNext();
+		        	b2=b2.getNext();
+		        }
+		        		
+			if(b2==null) 
+			{
+		              	b2=b1;
+		              	a2=a2.getNext();
+		              	  
+			}
+		        	
+		}
+		        	
+		return a1;
+		        	
+		         
+	}
 	public static void main(String[] args) {
 
 		
